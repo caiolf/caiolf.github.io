@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/assets/styles/variables";
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+  background: #121212;
+  color: $text-color;
+  line-height: 1.5;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: $title-color;
+  // margin-bottom: 0.5em;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color $transition;
+  &:hover {
+    color: darken($primary-color, 10%);
+    text-decoration: underline;
+  }
+}
+
+// Buttons
+button,
+.btn {
+  background: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: $border-radius;
+  padding: 0.5em 1.2em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background $transition;
+  &:hover {
+    background: darken($primary-color, 8%);
+  }
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+// Forms
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: $border-radius;
+  padding: 0.5em;
+  font-size: 1rem;
+  transition: border $transition;
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+}
+
+// Utility classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+.mb-2 {
+  margin-bottom: 2em;
+}
+.p-2 {
+  padding: 2em;
+}
