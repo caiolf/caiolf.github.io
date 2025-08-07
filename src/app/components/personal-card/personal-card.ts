@@ -10,6 +10,11 @@ interface Location {
   city: string;
   country: string;
 }
+interface DataItem {
+  icon: string;
+  label: string;
+  value: string;
+}
 
 @Component({
   selector: "app-personal-card",
@@ -28,4 +33,17 @@ export class PersonalCard {
     city: "Italy",
     country: "Cesena",
   };
+
+  dataItems: DataItem[] = [
+    {
+      icon: "mail",
+      label: "EMAIL",
+      value: this.me.email,
+    },
+    {
+      icon: "location_on",
+      label: "LOCATION",
+      value: `${this.location.city}, ${this.location.country}`,
+    },
+  ];
 }

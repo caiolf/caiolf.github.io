@@ -4,14 +4,15 @@
 <h1 class="name">{{ me.name }}</h1>
 <p class="title">{{ me.title }}</p>
 <div class="data">
+  @for (item of dataItems; track item) {
   <div class="data-item">
-    <span class="label">Email:</span>
-    <span class="value">{{ me.email }}</span>
+    <span class="material-symbols-outlined">{{ item.icon }}</span>
+    <div>
+      <span class="label">{{ item.label }}</span>
+      <span class="value">{{ item.value }}</span>
+    </div>
   </div>
-  <div class="data-item">
-    <span class="label">Location:</span>
-    <span class="value">{{ location.city }}, {{ location.country }}</span>
-  </div>
+  }
 </div>
 <div class="social-links">
   <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
