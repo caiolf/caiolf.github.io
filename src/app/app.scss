@@ -46,3 +46,12 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  :host {
+    padding: 1rem;
+    main {
+      flex-direction: column;
+    }
+  }
+}

@@ -15,6 +15,10 @@ interface DataItem {
   label: string;
   value: string;
 }
+interface SocialLink {
+  icon: string;
+  url: string;
+}
 
 @Component({
   selector: "app-personal-card",
@@ -44,6 +48,17 @@ export class PersonalCard {
       icon: "location_on",
       label: "LOCATION",
       value: `${this.location.city}, ${this.location.country}`,
+    },
+  ];
+
+  socialLinks: SocialLink[] = [
+    {
+      icon: "devicon-github-original",
+      url: "https://github.com/caiolf",
+    },
+    {
+      icon: "devicon-linkedin-plain",
+      url: "https://www.linkedin.com/in/caiolf/",
     },
   ];
 }
