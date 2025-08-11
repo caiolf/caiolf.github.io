@@ -70,7 +70,7 @@
   section.social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     a {
       color: $primary-color;
       font-size: 1.5rem;
@@ -91,7 +91,6 @@
 
 @media screen and (max-width: 768px) {
   :host {
-    padding: 1rem;
     align-items: start;
     width: 100%;
     section {
@@ -99,6 +98,10 @@
     }
     section.photo-name {
       flex-direction: row;
+      .photo {
+        width: 100px;
+        height: 100px;
+      }
       .name-container {
         display: flex;
         flex-direction: column;
@@ -107,6 +110,12 @@
           font-size: 1.2rem;
         }
       }
+    }
+    .additional-data {
+      display: none;
+    }
+    .expansion-panel {
+      display: block !important;
     }
     section.data {
       .data-item {

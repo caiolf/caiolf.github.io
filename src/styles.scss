@@ -110,6 +110,14 @@ select {
       active-indicator-height: 1px,
     )
   );
+  @include mat.expansion-overrides(
+    (
+      container-text-color: $text-color,
+      actions-divider-color: $accent,
+      container-background-color: $secondary-color,
+      header-indicator-color: $accent,
+    )
+  );
 }
 
 // ...existing code...

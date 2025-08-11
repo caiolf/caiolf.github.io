@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-
+import { MatExpansionModule } from "@angular/material/expansion";
 interface Persona {
   name: string;
   birthYear: number;
@@ -22,7 +22,7 @@ interface SocialLink {
 
 @Component({
   selector: "app-personal-card",
-  imports: [],
+  imports: [MatExpansionModule],
   templateUrl: "./personal-card.html",
   styleUrl: "./personal-card.scss",
 })

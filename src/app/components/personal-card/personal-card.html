@@ -7,26 +7,59 @@
     <p class="title">{{ me.title }}</p>
   </div>
 </section>
-<section class="data">
-  @for (item of dataItems; track item) {
-  <div class="data-item">
-    <span class="material-symbols-outlined">{{ item.icon }}</span>
-    <div>
-      <span class="label">{{ item.label }}</span>
-      <span class="value">{{ item.value }}</span>
+<div class="additional-data">
+  <section class="data">
+    @for (item of dataItems; track item) {
+    <div class="data-item">
+      <span class="material-symbols-outlined">{{ item.icon }}</span>
+      <div>
+        <span class="label">{{ item.label }}</span>
+        <span class="value">{{ item.value }}</span>
+      </div>
     </div>
-  </div>
-  }
-</section>
-<section class="social-links">
-  @for (link of socialLinks; track link) {
-  <a
-    href="{{ link.url }}"
-    class="social-link"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <i class="{{ link.icon }}"></i>
-  </a>
-  }
-</section>
+    }
+  </section>
+  <section class="social-links">
+    @for (link of socialLinks; track link) {
+    <a
+      href="{{ link.url }}"
+      class="social-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="{{ link.icon }}"></i>
+    </a>
+    }
+  </section>
+</div>
+
+<div class="expansion-panel" style="display: none; width: 100%">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title> Social Links </mat-panel-title>
+    </mat-expansion-panel-header>
+    <section class="data">
+      @for (item of dataItems; track item) {
+      <div class="data-item">
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        <div>
+          <span class="label">{{ item.label }}</span>
+          <span class="value">{{ item.value }}</span>
+        </div>
+      </div>
+      }
+    </section>
+    <section class="social-links">
+      @for (link of socialLinks; track link) {
+      <a
+        href="{{ link.url }}"
+        class="social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="{{ link.icon }}"></i>
+      </a>
+      }
+    </section>
+  </mat-expansion-panel>
+</div>
