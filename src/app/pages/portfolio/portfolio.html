@@ -1,1 +1,14 @@
-<p>portfolio works!</p>
+<div class="portfolio-container">
+  @if (projects && projects.length > 0) { @for (project of projects ; track
+  project) {
+  <div class="project">
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+  </div>
+  } } @else {
+  <section class="no-projects">
+    <span class="icon material-symbols-outlined"> construction </span>
+    <p>I'm cooking something up!</p>
+  </section>
+  }
+</div>

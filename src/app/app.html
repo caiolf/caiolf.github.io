@@ -2,7 +2,18 @@
   <div class="card-master me">
     <app-personal-card></app-personal-card>
   </div>
-  <div class="card-master pages">
-    <router-outlet />
+  <div class="card-master tabs">
+    <!-- <router-outlet /> -->
+    <mat-tab-group dynamicHeight animationDuration="100ms">
+      <mat-tab label="About me">
+        <app-about></app-about>
+      </mat-tab>
+      <mat-tab label="Resume">
+        <app-resume></app-resume>
+      </mat-tab>
+      <mat-tab label="Portfolio">
+        <app-portfolio></app-portfolio>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </main>
